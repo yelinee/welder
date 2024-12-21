@@ -20,9 +20,18 @@ const fabOrangeStyle = {
     right: 16,
 };
 
+// Song 타입 정의
+interface Song {
+    title: string;
+    contents: string;
+    translator: string;
+    createdAt: string;
+    views: number;
+}
+
 const SongDetailPage: React.FC = () => {
     const { id } = useParams();
-    const [song, setSong] = useState<any>(null);
+    const [song, setSong] = useState<Song | null>(null); // Song 타입 사용
     const [showFab, setShowFab] = useState(false);
 
     useEffect(() => {
@@ -30,14 +39,15 @@ const SongDetailPage: React.FC = () => {
             if (!id) return;
 
             try {
+                // @ts-expect-error 'id' is expected to be a string
                 const docRef = doc(db, "songs", id);
                 const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
-                    const songData = docSnap.data();
+                    const songData = docSnap.data() as Song;
 
                     if (songData.createdAt) {
-                        const createdAt = songData.createdAt.toDate();
+                        const createdAt = new Date(songData.createdAt);
                         songData.createdAt = createdAt.toLocaleDateString("ko-KR");
                     }
 
