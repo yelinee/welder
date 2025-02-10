@@ -44,14 +44,14 @@ const SongDetailPage: React.FC = () => {
                 const docSnap = await getDoc(docRef);
 
                 if (docSnap.exists()) {
-                    const songData = docSnap.data() as Song;
+                    const songData = docSnap.data();
 
-                    if (songData.createdAt) {
-                        const createdAt = new Date(songData.createdAt);
+                    if (songData.createdAt && songData.createdAt.toDate) {
+                        const createdAt = songData.createdAt.toDate();
                         songData.createdAt = createdAt.toLocaleDateString("ko-KR");
                     }
 
-                    setSong(songData);
+                    setSong(songData as Song);
                     await updateDoc(docRef, { views: (songData.views || 0) + 1 });
                 }
             } catch (error) {

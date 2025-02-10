@@ -2,7 +2,9 @@
 
 import './globals.css';
 import Link from 'next/link';
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useState, useEffect, useRef } from "react";
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 
 export default function RootLayout({
                                        children,
@@ -10,6 +12,25 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     const pathname = usePathname();
+    const [isCommentOpen, setIsCommentOpen] = useState(false);
+    const commentRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (commentRef.current && !commentRef.current.contains(event.target as Node)) {
+                setIsCommentOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
+
+    const toggleComment = () => {
+        setIsCommentOpen((prev) => !prev);
+    };
 
     return (
         <html lang="ko">
@@ -34,12 +55,27 @@ export default function RootLayout({
                                 pathname === '/about' ? 'text-[#FF9A3B] font-semibold' : ''
                             }`}>About us</Link>
                         </div>
-                        <div className="flex items-center">
-                            <Link href="#">
-                                <button
-                                    className="bg-black text-white px-4 py-2 border-0 rounded hover:bg-[#FF9A3B] transition-colors">Login
-                                </button>
-                            </Link>
+                        <div className="relative">
+                            <button
+                                className="flex justify-center items-center p-2 rounded-full hover:bg-black hover:bg-opacity-[0.04] cursor-pointer"
+                                onClick={toggleComment}
+                            >
+                                <CommentOutlinedIcon/>
+                            </button>
+                            {/* 드롭다운 메뉴 */}
+                            {isCommentOpen && (
+                                <div
+                                    ref={commentRef}
+                                    className="absolute top-12 right-0 bg-white border border-gray-300 rounded-lg shadow-lg w-56 p-4 z-50"
+                                >
+                                    <p className="text-lg font-semibold mb-2">웰더팀과의 소통 창구</p>
+                                    <p className="mb-2">
+                                        시스템 준비 중입니다🛠️ <br/>
+                                        조금만 기다려주세요:)
+                                    </p>
+                                    <textarea/>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -51,7 +87,10 @@ export default function RootLayout({
 
         {/* 푸터 */}
         <footer className="mt-10">
-            <div className="max-w-screen-xl mx-auto p-8 border border-white border-t-gray-400 text-gray-400 text-sm">© 2024.Welder all rights reserved.</div></footer>
+            <div className="max-w-screen-xl mx-auto p-8 border border-white border-t-gray-400 text-gray-400 text-sm">©
+                2024.Welder all rights reserved.
+            </div>
+        </footer>
 
 
         </body>

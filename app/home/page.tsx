@@ -84,7 +84,7 @@ const HomePage: React.FC = () => {
                         onChange={(e) => setQuery(e.target.value)}
                         className="w-full px-6 py-3 bg-orange-100 text-gray-600 placeholder-orange-300 rounded-full
             border border-orange-300 shadow-md focus:bg-white focus:placeholder-gray-300
-            focus:outline-none focus:border-gray-300 focus:shadow-gray-300 transition-all"
+            focus:outline-none focus:border-gray-300 focus:shadow-gray-300 transition-colors"
                     />
                     <button
                         type="submit"
