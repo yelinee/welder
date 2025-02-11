@@ -161,3 +161,6 @@ next-env.d.ts
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,nextjs,firebase
 .vercel
+
+# 환경 변수 파일
+.env.local
