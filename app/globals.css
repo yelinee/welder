@@ -7,7 +7,6 @@ html, body {
     margin: 0;
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
     'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-
 }
 
 * {
@@ -17,12 +16,3 @@ html, body {
 html {
     overflow-y: scroll;
 }
-
-/* 메인 컨텐츠 스타일 */
-/*.main {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*}*/
