@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 찬양 번역 공유 데이터베이스
 
-## Getting Started
+## 프로젝트 소개
+- 웰더(welder)팀은 **언어 사역을 통해 열방 선교를 하는 동아리**입니다.
+- 웰더팀에서 번역한 찬양을 다른 사람들도 사용 가능하도록 데이터베이스화하였습니다.
+- **배포주소**: [찬양번역 사이트 바로가기](https://welder-phi.vercel.app)
 
-First, run the development server:
+## 기술 스택
+### FrontEnd
+<img src="https://img.shields.io/badge/NEXT.JS-black?style=for-the-badge&logo=Next.js&logoColor=white">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### BackEnd
+<img src="https://img.shields.io/badge/Firebase-red?style=for-the-badge&logo=Firebase&logoColor=white">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 요구사항 정의
+(추가 예정)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ERD
+<img src="https://github.com/user-attachments/assets/e90e8810-559a-4c1b-a92e-b1d5079ee8f0">
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 시스템 아키텍처
+<img src="https://github.com/user-attachments/assets/35a05e78-1def-43e7-bfd4-7c4e0a10085f">
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 주요 화면
+(추가 예정)
