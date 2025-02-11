@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import { db } from "@/.firebase/firebase";
+import { db } from "@/firebase/firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import Zoom from "@mui/material/Zoom";
 import Fab from "@mui/material/Fab";

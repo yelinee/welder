@@ -1,7 +1,7 @@
 "use client";
 
 import React, {useState} from "react";
-import {db} from "@/.firebase/firebase";
+import {db} from "@/firebase/firebase";
 import {addDoc, collection, serverTimestamp} from "firebase/firestore";
 
 const AddSongPage: React.FC = () => {

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import TablePagination from "@mui/material/TablePagination";
-import { db } from "@/.firebase/firebase";
+import { db } from "@/firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import Link from "next/link";
 
