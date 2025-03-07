@@ -22,4 +22,10 @@
 <img src="https://github.com/user-attachments/assets/35a05e78-1def-43e7-bfd4-7c4e0a10085f">
 
 ## 주요 화면
-(추가 예정)
+### 1) 홈 화면
+![image](https://github.com/user-attachments/assets/cb8c44fe-4987-442f-8fe0-7d81bf1547fe)
+### 2) 상세 화면
+![image](https://github.com/user-attachments/assets/59a36eaf-346e-40ff-8aec-58593949bfa2)
+### 3) 관리자 화면
+![image](https://github.com/user-attachments/assets/4d75ec22-8b06-4379-a544-7daf725419a6)
+
